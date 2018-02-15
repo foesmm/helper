@@ -5,7 +5,8 @@ using System.Windows.Forms;
 
 namespace org.foesmm.helper
 {
-    public class UAC
+    // ReSharper disable once InconsistentNaming
+    public static class UAC
     {
         private const int BcmFirst = 0x1600; //Normal button
         private const int BcmSetshield = BcmFirst + 0x000C; //Elevated button
@@ -25,6 +26,7 @@ namespace org.foesmm.helper
         /// <summary>
         ///     A <see cref="bool" /> value indicating if UAC virtualization is supported on the current machine
         /// </summary>
+        // ReSharper disable once InconsistentNaming
         public static bool IsUACSupported => Environment.OSVersion.Version.Major >= 6;
 
         /// <summary>

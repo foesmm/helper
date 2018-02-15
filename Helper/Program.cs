@@ -4,7 +4,7 @@ using NDesk.Options;
 
 namespace org.foesmm.helper
 {
-    internal class Program
+    internal static class Program
     {
         private static int Main(string[] args)
         {
@@ -19,7 +19,9 @@ namespace org.foesmm.helper
             opts.Parse(args);
 
             if (directories.Where(dir => !FileAccess.HasWriteAccess(dir)).Any(dir => !FileAccess.GrantWriteAccess(dir)))
+            {
                 return -1;
+            }
 
             return 0;
         }

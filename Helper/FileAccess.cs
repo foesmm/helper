@@ -8,11 +8,14 @@ using System.Windows.Forms;
 
 namespace org.foesmm.helper
 {
-    public class FileAccess
+    public static class FileAccess
     {
         public static bool HasWriteAccess(string directory)
         {
-            if (!Directory.Exists(directory)) return false;
+            if (!Directory.Exists(directory))
+            {
+                return false;
+            }
 
             var wid = WindowsIdentity.GetCurrent();
 
@@ -95,9 +98,15 @@ namespace org.foesmm.helper
 
         public static bool GrantWriteAccess(string directoryPath)
         {
-            if (string.IsNullOrEmpty(directoryPath) && !Directory.Exists(directoryPath)) return false;
+            if (string.IsNullOrEmpty(directoryPath) && !Directory.Exists(directoryPath))
+            {
+                return false;
+            }
             var sid = WindowsIdentity.GetCurrent().User;
-            if (sid == null) return false;
+            if (sid == null)
+            {
+                return false;
+            }
 
             var dInfo = new DirectoryInfo(directoryPath);
             var dSecurity = dInfo.GetAccessControl();
