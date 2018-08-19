@@ -6,7 +6,7 @@ using System.Security.AccessControl;
 using System.Security.Principal;
 using System.Windows.Forms;
 
-namespace org.foesmm.helper
+namespace foesmm.helper
 {
     public static class FileAccess
     {

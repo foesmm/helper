@@ -2,7 +2,7 @@
 using System.Linq;
 using NDesk.Options;
 
-namespace org.foesmm.helper
+namespace foesmm.helper
 {
     internal static class Program
     {

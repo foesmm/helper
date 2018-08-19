@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Security.Principal;
 using System.Windows.Forms;
 
-namespace org.foesmm.helper
+namespace foesmm.helper
 {
     // ReSharper disable once InconsistentNaming
     public static class UAC
